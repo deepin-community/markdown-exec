@@ -1,4 +1,18 @@
 #!/usr/bin/make -f
+# -*- makefile -*-
+
+#export DH_VERBOSE = 1
+
+include /usr/share/dpkg/pkg-info.mk
+export PDM_BUILD_SCM_VERSION = $(DEB_VERSION_UPSTREAM)
+
+export PYBUILD_NAME=markdown_exec
+export PYBUILD_SYSTEM=pyproject
+export PYBUILD_TEST_ARGS=-vv -k 'not test_output_markdown'
 
 %:
-	dh $@
+	dh $@ --buildsystem=pybuild
+
+override_dh_clean:
+	dh_clean
+	rm -rf .pdm-build

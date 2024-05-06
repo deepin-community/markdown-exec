@@ -1,0 +1,11 @@
+# watch file for markdown-exec
+
+version=4
+
+opts="mode=git, \
+      compression=gz, \
+      pgpmode=none, \
+      uversionmangle=s/(\d)[_\.\-\+]?((alpha|beta|RC|rc|pre|dev)\.?\d*)$/$1~$2/, \
+      dversionmangle=s/\+ds(\.?\d+)?$//" \
+https://github.com/pawamoy/markdown-exec.git \
+      refs/tags/@ANY_VERSION@
