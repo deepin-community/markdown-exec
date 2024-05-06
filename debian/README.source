@@ -1,0 +1,57 @@
+This package is maintained with git-buildpackage(1). It follows DEP-14 for
+branch naming (e.g. using debian/master for the current version in Debian
+unstable due Debian Python team policy).
+
+It uses pristine-tar(1) to store enough information in git to generate bit
+identical tarballs when building the package without having downloaded an
+upstream tarball first.
+
+When working with patches it is recommended to use "gbp pq import" to import
+the patches, modify the source and then use "gbp pq export --commit" to commit
+the modifications.
+
+The changelog is generated using "gbp dch" so if you submit any changes don't
+bother to add changelog entries but rather provide a nice git commit message
+that can then end up in the changelog.
+
+It is recommended to build the package with pbuilder using:
+
+    gbp buildpackage --git-pbuilder
+
+For information on how to set up a pbuilder environment see the git-pbuilder(1)
+manpage. In short:
+
+    DIST=sid git-pbuilder create
+    gbp clone https://salsa.debian.org/python-team/packages/markdown-excec.git
+    cd markdown-exec
+    gbp buildpackage --git-pbuilder
+
+About a potential python-markdown-excec-doc package
+
+While writing (at version 1.0.0) some packages are not yet packaged in Debian
+to get the MkDocs based documentation build and packaged within a dedicated
+binary package.
+The pyproject.toml file list the following packages as dependencies.
+
+      required Python package                      Debian package
+
+docs = [
+    "mkdocs>=1.3",                              ✅ mkdocs
+    "mkdocs-coverage>=0.2",                     ❌ not packaged yet
+    "mkdocs-gen-files>=0.3",                    ✅ not packaged yet
+    "mkdocs-literate-nav>=0.4",                 ✅ mkdocs-literate-nav
+    "mkdocs-material>=7.3",                     ✅ mkdocs-material
+    "mkdocs-section-index>=0.3",                ✅ mkdocs-section-index
+    "mkdocstrings[python]>=0.18",               ✅ mkdocstrings
+    "markdown-callouts>=0.2",                   ✅ python3-markdown-callouts
+    "toml>=0.10",                               ✅ python3-toml
+    "pydeps>=1.10.12",                          ❌ not packaged yet
+    "diagrams>=0.21.1",                         ✅ python3-diagrams
+    "rich>=12.3.0",                             ✅ python3-rich
+    "matplotlib>=3.5.2",                        ✅ python3-matplotlib
+    "numpy>=1.23; python_version >= '3.8'",     ✅ python3-numpy
+    "textual[dev]",                             ✅ python3-textual
+    "pytermgui>=6.3; python_version >= '3.8'",  ✅ not packaged yet
+]
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sun, 21 Apr 2024 08:05:00 +0200

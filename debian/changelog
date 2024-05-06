@@ -1,5 +1,69 @@
-template-repository (1.0-1) unstable; urgency=medium
+markdown-exec (1.8.1-1) unstable; urgency=medium
 
-  * Initial release
+  * [b78cee2] New upstream version 1.8.1
+  * [76b52a1] d/copyright: Update year and contact data
+  * [fde2b59] d/control: Bump Standards-Version to 4.7.0
+  * [fadbb25] d/README.source: Update information about available packages
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sun, 21 Apr 2024 08:06:22 +0200
+
+markdown-exec (1.8.0-1) unstable; urgency=medium
+
+  * [fad0de3] New upstream version 1.8.0
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sun, 14 Jan 2024 18:41:05 +0100
+
+markdown-exec (1.7.0-1) unstable; urgency=medium
+
+  * [c5c6869] d/rules: Add extra action to dh_clean
+    (Closes: #1048536)
+  * [cddf7dc] New upstream version 1.7.0
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sun, 22 Oct 2023 09:25:06 +0200
+
+markdown-exec (1.6.0-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sat, 17 Jun 2023 16:15:45 +0200
+
+markdown-exec (1.6.0-1) experimental; urgency=medium
+
+  * [a2cd876] New upstream version 1.6.0
+  * [e408b57] d/control: Switch to python3-pdm-backend in B-D
+  * [10a83f5] d/rules: Use PDM_BUILD_SCM_VERSION for version injecting
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Tue, 25 Apr 2023 19:42:48 +0200
+
+markdown-exec (1.4.0-1) unstable; urgency=medium
+
+  * [2aede3c] New upstream version 1.4.0
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sun, 19 Mar 2023 07:26:01 +0100
+
+markdown-exec (1.3.0-1) unstable; urgency=medium
+
+  * [8a80096] New upstream version 1.3.0
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Mon, 27 Feb 2023 12:21:30 +0100
+
+markdown-exec (1.2.0-1) unstable; urgency=medium
+
+  * [fc3c625] New upstream version 1.2.0
+  * [b11a8a0] d/copyright: Update year data
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sun, 05 Feb 2023 12:08:55 +0100
+
+markdown-exec (1.0.0-2) unstable; urgency=medium
+
+  * Source only upload
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Fri, 13 Jan 2023 18:38:42 +0100
+
+markdown-exec (1.0.0-1) unstable; urgency=medium
+
+  * [719bdb8] New upstream version 1.0.0
+  * [9d1bb06] First basic Debianization
+    (Closes: #1026261)
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Wed, 21 Dec 2022 19:04:22 +0100
